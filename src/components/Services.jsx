@@ -13,30 +13,30 @@ import { Cover } from "./ui/cover";
 export function Services() {
     const features = [
         {
-            title: "Built for developers",
+            title: "Front-End",
             description:
                 "Built for engineers, developers, dreamers, thinkers and doers.",
             icon: <IconTerminal2 />,
         },
         {
-            title: "Ease of use",
+            title: "Back-End",
             description:
                 "It's as easy as using an Apple, and as expensive as buying one.",
+            icon: <IconAdjustmentsBolt />,
+        },
+        {
+            title: "Graphic Design",
+            description:
+                "Our prices are best in the market. No cap, no lock, no credit card required.",
             icon: <IconEaseInOut />,
         },
         {
-            title: "Pricing like no other",
-            description:
-                "Our prices are best in the market. No cap, no lock, no credit card required.",
-            icon: <IconCurrencyDollar />,
-        },
-        {
-            title: "100% Uptime guarantee",
+            title: "Dev Ops",
             description: "We just cannot be taken down by anyone.",
             icon: <IconCloud />,
         },
         {
-            title: "Multi-tenant Architecture",
+            title: "Multi-talented Team",
             description: "You can simply share passwords instead of buying new seats",
             icon: <IconRouteAltLeft />,
         },
@@ -50,7 +50,7 @@ export function Services() {
             title: "Money back guarantee",
             description:
                 "If you donot like EveryAI, we will convince you to like us.",
-            icon: <IconAdjustmentsBolt />,
+            icon: <IconCurrencyDollar />,
         },
         {
             title: "And everything else",
