@@ -64,11 +64,11 @@ export function Services() {
             <div className="px-8 flex flex-col justify-center items-center">
                 <h2 className="mx-auto text-white text-xl md:text-4xl lg:text-5xl font-sans relative z-20 font-bold tracking-tight">
                     <Cover>Our Services</Cover>
-                   
+
                 </h2>
-                <p className="max-w-xl text-[1rem] mt-[20px] text-center mt-[10px] md:text-lg text-neutral-700 dark:text-neutral-400">
-          We Provide You Quality Of Services
-        </p>
+                <p className="max-w-xl text-[1rem] mt-[20px] text-center md:text-lg text-neutral-700 dark:text-neutral-400">
+                    We Provide You Quality Of Services
+                </p>
             </div>
             (<div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
