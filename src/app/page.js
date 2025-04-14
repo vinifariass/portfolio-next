@@ -1,7 +1,7 @@
 import {Contact} from "@/components/Contact";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import { NavBar } from "@/components/Navbar";
+import { NavBar } from "@/components/NavBar";
 import  Pricing  from "@/components/Pricing"
 import { Projects } from "@/components/Projects";
 import { Resume } from "@/components/Resume";
