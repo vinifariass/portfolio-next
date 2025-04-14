@@ -27,6 +27,16 @@ export function Resume() {
                         </p>
                     </div>
 
+                    
+                    <div>
+                        <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]"><Cover>CTC Tech</Cover></h4>
+                        <span className="text-blue-400 my-[10px]">April 2025 - 2025</span>
+                        <p
+                            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                            Desenvolvedor Backend Pleno
+                        </p>
+                    </div>
+
 
                     <div>
                         <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]"><Cover>Freelancing</Cover></h4>
@@ -135,7 +145,7 @@ export function Resume() {
         },
     ];
     return (
-        <div className="w-full">
+        <div className="w-full" id="resume">
             <Timeline data={data} />
         </div>
     );

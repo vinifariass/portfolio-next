@@ -59,7 +59,7 @@ export function Services() {
         },
     ];
     return (
-        <div className="mt-[150px] flex flex-col">
+        <div className="mt-[150px] flex flex-col" id="services">
 
             <div className="px-8 flex flex-col justify-center items-center">
                 <h2 className="mx-auto text-white text-xl md:text-4xl lg:text-5xl font-sans relative z-20 font-bold tracking-tight">
