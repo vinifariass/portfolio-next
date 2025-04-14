@@ -71,7 +71,6 @@ export function NavBar() {
     <div className="fixed left-[90%] translate-x-[-90%] md:left-[50%] md:translate-x-[-50%] bottom-[50px] z-[101]">
       <FloatingDock
         // only for demo, remove for production
-        mobileClassName="translate-y-20"
         items={links} />
     </div>
   );
