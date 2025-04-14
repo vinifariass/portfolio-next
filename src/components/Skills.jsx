@@ -2,7 +2,7 @@
 import { animate, motion } from "motion/react";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { GoCopilot } from "react-icons/go";
+import { IconBrandJavascript, IconBrandLaravel, IconBrandMysql, IconBrandNextjs, IconBrandPhp } from "@tabler/icons-react";
 
 export function Skills() {
   return (
@@ -75,19 +75,19 @@ const Skeleton = () => {
       className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row shrink-0 justify-center items-center gap-2">
         <Container className="h-8 w-8 circle-1">
-          <ClaudeLogo className="h-4 w-4 " />
+          <IconBrandNextjs className="h-4 w-4 dark:text-white " />
         </Container>
         <Container className="h-12 w-12 circle-2">
-          <GoCopilot className="h-6 w-6 dark:text-white" />
+          <IconBrandMysql className="h-6 w-6 dark:text-white" />
         </Container>
         <Container className="circle-3">
-          <OpenAILogo className="h-8 w-8 dark:text-white" />
+          <IconBrandLaravel className="h-8 w-8 dark:text-white" />
         </Container>
         <Container className="h-12 w-12 circle-4">
-          <MetaIconOutline className="h-6 w-6 " />
+          <IconBrandPhp className="h-6 w-6 dark:text-white " />
         </Container>
         <Container className="h-8 w-8 circle-5">
-          <GeminiLogo className="h-4 w-4 " />
+          <IconBrandJavascript className="h-4 w-4 dark:text-white" />
         </Container>
       </div>
       <div

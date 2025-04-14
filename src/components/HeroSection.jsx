@@ -61,7 +61,7 @@ const HeroSection = () => {
         <span className="text-[#4e69e0]">Its Me</span>
 
         <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          Vinicius Farias, <br /> FullStack <Cover>Developer</Cover>.
+          Vinicius Farias, <br /> Full Stack <Cover>Developer</Cover>.
         </h2>
         <a href="#" className="text-white border-b border-1 border-[#525252] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
           Hire Me &rarr;

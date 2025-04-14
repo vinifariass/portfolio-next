@@ -43,7 +43,7 @@ export function Resume() {
                         <span className="text-blue-400 my-[10px]">2025 - 2025</span>
                         <p
                             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                            Work as FullStack Developer
+                            Work as Full Stack Developer
                         </p>
                     </div>
 
@@ -52,7 +52,7 @@ export function Resume() {
                         <span className="text-blue-400 my-[10px]">2025 - 2025</span>
                         <p
                             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                            Work as FullStack Developer
+                            Work as Full Stack Developer
                         </p>
                     </div>
                 </div>
