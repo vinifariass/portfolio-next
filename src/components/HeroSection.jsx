@@ -66,13 +66,13 @@ const HeroSection = () => {
         <a href="#" className="text-white border-b border-1 border-[#525252] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
           Hire Me &rarr;
         </a>
-        <div className="flex flex-row mt-[60px]">
+       {/*  <div className="flex flex-row mt-[60px]">
           <AnimatedTooltip items={people} />
 
         </div>
         <p className="max-w-xl text-[1rem] text-start mt-[10px] md:text-lg text-neutral-700 dark:text-neutral-400">
           Our Team Members
-        </p>
+        </p> */}
       </div>
     </div>
     <div className="w-ful h-full flex items-end bg-[#0d0d0e]">
