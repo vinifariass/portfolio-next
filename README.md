@@ -9,6 +9,17 @@
   <img src="https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio.png" width="600" /> <img src="https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio-mobile.png" width="200" /> 
 </div>
 
+## 🚀 Tecnologias 
+- ![HTML](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white) Estruturação das páginas e componentes.
+- ![CSS](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white) Estilização para uma interface visual agradável.
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) Para interatividade e funcionalidades dinâmicas.
+- ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white) Biblioteca principal para construção da interface do usuário com hooks como `useState` e `useEffect`.
+- ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white) Framework React para renderização server-side e geração de sites estáticos.
+- ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) Framework de CSS para estilização responsiva e otimizada.
+- ![Bootstrap Icons](https://img.shields.io/badge/-Bootstrap_Icons-7952B3?style=flat&logo=bootstrap&logoColor=white) Ícones prontos para uso em componentes.
+
+
+
 ## Getting Started
 
 First, run the development server:
