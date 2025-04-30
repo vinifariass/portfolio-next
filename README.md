@@ -6,7 +6,7 @@
 
 ## 🖼️  Visualização:
 <div align="center">
-  <img src="[./public/print-pc.png](https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio.png)" width="600" /> <img src=".[/public/print-mobile.png](https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio-mobile.png)" width="200" /> 
+  <img src="https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio.png" width="600" /> <img src="https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio-mobile.png" width="200" /> 
 </div>
 
 ## Getting Started
