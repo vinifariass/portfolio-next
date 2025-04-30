@@ -1,7 +1,8 @@
-import Image from "next/image";
+'use client'
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { Cover } from "./ui/cover";
+import { DownloadButton } from "./ui/download-button";
 
 export function Resume() {
     const data = [
@@ -27,7 +28,7 @@ export function Resume() {
                         </p>
                     </div>
 
-                    
+
                     <div>
                         <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]"><Cover>CTC Tech</Cover></h4>
                         <span className="text-blue-400 my-[10px]">April 2025 - 2025</span>
@@ -84,11 +85,14 @@ export function Resume() {
                 </div>
             ),
         },
-        
+
     ];
     return (
         <div className="w-full" id="resume">
             <Timeline data={data} />
+            <div className="flex flex-wrap justify-center items-center w-full max-w-2xl mx-auto gap-4">
+            <DownloadButton />
+            </div>
         </div>
     );
 }
