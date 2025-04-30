@@ -18,7 +18,11 @@
 - ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) Framework de CSS para estilização responsiva e otimizada.
 - ![Bootstrap Icons](https://img.shields.io/badge/-Bootstrap_Icons-7952B3?style=flat&logo=bootstrap&logoColor=white) Ícones prontos para uso em componentes.
 
+🤖 Introdução
 
+Desenvolvido com Next.js para a construção da interface de usuário, este portfólio foi estilizado com TailwindCSS. Ele demonstra de maneira única as habilidades do desenvolvedor, criando uma experiência envolvente e impactante.
+
+Além disso, integrei alguns serviços do Accernity UI para aprimorar a interface com componentes de design modernos e funcionais
 
 ## Getting Started
 
