@@ -2,8 +2,11 @@
   Portfolio Website - v1.0<br/>
   <a href="https://portfolio-next-mvqg.vercel.app/" target="_blank">vinicius.portfolio</a>
 </h2>
+
+
+## 🖼️  Visualização:
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img src="[./public/print-pc.png](https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio.png)" width="600" /> <img src=".[/public/print-mobile.png](https://raw.githubusercontent.com/vinifariass/portfolio-next/refs/heads/master/public/images/portfolio-mobile.png)" width="200" /> 
 </div>
 
 ## Getting Started
