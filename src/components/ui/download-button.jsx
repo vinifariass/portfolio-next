@@ -115,22 +115,39 @@ export function DownloadButton() {
 
     return (
         <a
-            href="#"
-            ref={buttonRef}
-            className="button dark w-auto max-w-xs"
-            style={{ "--background": "rgb(23 23 23 / var(--tw-bg-opacity, 1))" }}
-            onClick={handleButtonClick}
+    href="#"
+    ref={buttonRef}
+    className="button dark w-auto"
+    style={{ "--background": "rgb(23 23 23 / var(--tw-bg-opacity, 1))" }}
+    onClick={handleButtonClick}
+>
+    <ul style={{ padding: "16px 20px", minWidth: "200px" }}>
+        <li style={{ display: buttonState === "download" ? "block" : "none" }}>
+            &#68;ownload Resume
+        </li>
+        <li
+            style={{
+                display: buttonState === "downloading" ? "block" : "none",
+                margin: "0 10px", // Espaçamento horizontal
+            }}
         >
-            <ul>
-                <li style={{ display: buttonState === "download" ? "block" : "none" }}>&#68;ownload Resume</li>
-                <li style={{ display: buttonState === "downloading" ? "block" : "none" }}>&#68;ownloading</li>
-                <li style={{ display: buttonState === "open" ? "block" : "none" }}>Open File</li>
-            </ul>
-            <div>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2V16M12 16L8 12M12 16L16 12M4 20H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            </div>
-        </a>
+            &#68;ownloading
+        </li>
+        <li style={{ display: buttonState === "open" ? "block" : "none" }}>
+            Open File
+        </li>
+    </ul>
+    <div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12 2V16M12 16L8 12M12 16L16 12M4 20H20"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    </div>
+</a>
     );
 }

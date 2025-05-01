@@ -57,26 +57,32 @@ body{
 }
 .button ul {
   margin: 0;
-  padding: 16px 40px;
+  padding: 16px 20px; /* Aumenta o padding horizontal */
   list-style: none;
   text-align: center;
   position: relative;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
   color: var(--text);
+  min-width: 200px; /* Garante largura mínima */
 }
+
+.button ul li {
+  white-space: nowrap; /* Impede quebra de linha */
+}
+
 .button ul li:not(:first-child) {
   top: 16px;
   left: 0;
   right: 0;
   position: absolute;
 }
+
 .button ul li:nth-child(2) {
   top: 76px;
 }
+
 .button ul li:nth-child(3) {
   top: 136px;
 }
