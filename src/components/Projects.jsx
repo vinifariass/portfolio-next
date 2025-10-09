@@ -1,7 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
-import { Carousel,Card } from "./ui/apple-cards-carousel";
+import { Carousel, Card } from "./ui/apple-cards-carousel";
 
 export function Projects() {
   const cards = data.map((card, index) => (
@@ -10,82 +11,211 @@ export function Projects() {
 
   return (
     <div className="w-full h-full py-20" id="projects">
-      <h2
-        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Recent Projects
+      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Projetos recentes
       </h2>
       <Carousel items={cards} />
     </div>
   );
 }
 
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4">
-            <p
-              className="text-neutral-600 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-          </div>
-        );
-      })}
-    </>
-  );
-};
+const ProjectContent = ({
+  heroImage,
+  link,
+  description,
+  highlights,
+  stack,
+  outcome,
+  details,
+  title,
+}) => (
+  <div className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4 space-y-6">
+    {heroImage && (
+      <a
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e69e0] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F5F5F7] rounded-2xl"
+      >
+        <div className="relative w-full overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm aspect-video">
+          <Image
+            src={heroImage}
+            alt={`Tela inicial do projeto ${title}`}
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 800px, 100vw"
+          />
+        </div>
+      </a>
+    )}
+    <p className="text-neutral-600 text-base md:text-xl font-sans max-w-3xl mx-auto">
+      {description}
+    </p>
+    {details?.length ? (
+      <div className="space-y-4 text-neutral-600 text-sm md:text-base">
+        {details.map((paragraph, index) => (
+          <p key={`${title}-detail-${index}`}>{paragraph}</p>
+        ))}
+      </div>
+    ) : null}
+    <div className="grid gap-6 md:grid-cols-2">
+      <div>
+        <h3 className="text-neutral-800 font-semibold uppercase tracking-wide text-xs md:text-sm">
+          Principais entregas
+        </h3>
+        <ul className="mt-3 space-y-2 text-neutral-600 text-sm md:text-base list-disc pl-5">
+          {highlights.map((item, index) => (
+            <li key={`${title}-highlight-${index}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 className="text-neutral-800 font-semibold uppercase tracking-wide text-xs md:text-sm">
+          Stack
+        </h3>
+        <ul className="mt-3 text-neutral-600 text-sm md:text-base space-y-2 list-disc pl-5">
+          {stack.map((item, index) => (
+            <li key={`${title}-stack-${index}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    {outcome && (
+      <p className="text-neutral-700 text-sm md:text-base font-medium border-l-4 border-[#4e69e0] pl-4">
+        {outcome}
+      </p>
+    )}
+    {link && (
+      <div className="flex flex-wrap items-center gap-3 pt-2">
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-[#4e69e0] px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#425ad4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4e69e0] focus-visible:ring-offset-2"
+        >
+          Abrir projeto
+        </a>
+      </div>
+    )}
+  </div>
+);
 
 const data = [
   {
-    category: "Condominium Dashboard",
-    title: "Condominium Manager",
-    src: "/images/dashboard.png",
-    content: <DummyContent />,
+    category: "Fintech · Mobile",
+    title: "Controle Financeiro",
+    src: "https://s.wordpress.com/mshots/v1/https://financontrol-beta.vercel.app/?w=1200",
+    content: (
+      <ProjectContent
+        title="Controle Financeiro"
+        heroImage="https://s.wordpress.com/mshots/v1/https://financontrol-beta.vercel.app/?w=1600"
+        link="https://financontrol-beta.vercel.app/"
+        description="Monorepo que leva o core web para mobile, mantendo a mesma experiência de produto e engine financeira compartilhada."
+        details={[
+          "Estruturei a arquitetura com TurboRepo para compartilhar módulos entre apps e garantir builds ágeis.",
+          "Desenhei o roadmap de sincronização offline com foco em segurança, priorizando fluxo de tokens e resiliência em conexões instáveis.",
+        ]}
+        highlights={[
+          "Motor de precificação e pacotes core reutilizáveis em outros canais.",
+          "API client com refresh token e fila para sincronização offline segura.",
+          "Design tokens extraídos para manter UI consistente entre web e mobile.",
+        ]}
+        stack={[
+          "Expo / React Native",
+          "TypeScript / TurboRepo",
+          "Shadcn UI tokens",
+          "Secure Store (roadmap)",
+        ]}
+        outcome="Base pronta para acelerar features financeiras mobile enquanto compartilha regras de negócio com a aplicação web."
+      />
+    ),
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "SaaS · Templates",
+    title: "Micro Enterprise",
+    src: "https://s.wordpress.com/mshots/v1/https://micro-enterprises.vercel.app/?w=1200",
+    content: (
+      <ProjectContent
+        title="Micro Enterprise"
+        heroImage="https://s.wordpress.com/mshots/v1/https://micro-enterprises.vercel.app/?w=1600"
+        link="https://micro-enterprises.vercel.app/"
+        description="Template Next.js escalável para pequenos negócios venderem online com experiência premium desde o dia zero."
+        details={[
+          "Mapeei os principais fluxos de uma PME (vendas, agendamentos, suporte) e converti em páginas modulares fáceis de personalizar.",
+          "Preparei integrações reais com pagamentos, analytics e e-mail marketing para acelerar o go-to-market de novos clientes.",
+        ]}
+        highlights={[
+          "Ecommerce 2.0 com carrinho global, toasts e resumo de pedido responsivo.",
+          "Locator com Leaflet, sugestões, raio dinâmico e detalhe de loja com reviews.",
+          "Dashboard de vendas, chat interno com áudio e blog integrado prontos para white-label.",
+        ]}
+        stack={[
+          "Next.js 15 / React 19",
+          "TypeScript / Tailwind CSS",
+          "Shadcn-like components",
+          "Leaflet / Recharts / Resend",
+        ]}
+        outcome="Reduzi o tempo de lançamento de novos comércios digitais de semanas para poucos dias, com uma base white-label pronta para escalar."
+      />
+    ),
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Condomínio · Admin",
+    title: "Admin SD",
+    src: "https://s.wordpress.com/mshots/v1/https://admin-sd.vercel.app/?w=1200",
+    content: (
+      <ProjectContent
+        title="Admin SD"
+        heroImage="https://s.wordpress.com/mshots/v1/https://admin-sd.vercel.app/?w=1600"
+        link="https://admin-sd.vercel.app/"
+        description="Painel administrativo completo para condomínios com fluxos internos, integrações corporativas e experiência responsiva."
+        details={[
+          "Modelei módulos críticos (visitantes, encomendas, agendamentos, reuniões online) e orquestrei as permissões por cargo.",
+          "Implementei rotinas de cron e webhooks para sincronizar dados com sistemas de portaria e comunicação interna.",
+        ]}
+        highlights={[
+          "Módulos para visitantes, moradores, agendamentos, encomendas e reuniões online.",
+          "NextAuth com RBAC, UploadThing, OCR e rotinas de cron para integrações externas.",
+          "Design responsivo com dashboards, filtros avançados e experiência mobile-first.",
+        ]}
+        stack={[
+          "Next.js (App Router)",
+          "Prisma / PostgreSQL",
+          "NextAuth / UploadThing",
+          "Shadcn UI / Tailwind",
+        ]}
+        outcome="Substituí planilhas por um hub colaborativo que centraliza operações e reduz o tempo de atendimento da administração do condomínio."
+      />
+    ),
   },
-
   {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
-  },
-  {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
-  },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Marketplace · Saúde",
+    title: "Hostly (pre-lançamento)",
+    src: "https://s.wordpress.com/mshots/v1/https://hostly-beta.vercel.app/?w=1200",
+    content: (
+      <ProjectContent
+        title="Hostly"
+        heroImage="https://s.wordpress.com/mshots/v1/https://hostly-beta.vercel.app/?w=1600"
+        link="https://hostly-beta.vercel.app/"
+        description="Marketplace inteligente conectando famílias a cuidadores verificados, com mapa interativo, perfis ricos e fluxo de onboarding completo."
+        details={[
+          "Estou finalizando o módulo de mapa com markers dinâmicos que mostram preço, taxa da plataforma e valor líquido para o cuidador.",
+          "O painel administrativo inclui dashboards, cadastro de providers, controle de agenda e fluxo de aprovação para novos cuidadores.",
+          "Planejo integrar pagamentos (Stripe/Mercado Pago) e sistema de avaliações para fechar o MVP nas próximas semanas.",
+        ]}
+        highlights={[
+          "Mapa com Leaflet + clustering, filtros geográficos e cards interativos.",
+          "Perfil de cuidador com tabs (dados pessoais, especialidades, notificações) e editor completo.",
+          "Painel admin (Next.js) com navbar dinâmica, side sheet e tabelas reativas para gestão de cuidadores.",
+        ]}
+        stack={[
+          "Next.js 15 / React 19",
+          "TypeScript / Tailwind CSS",
+          "Leaflet / Shadcn UI",
+          "Próximas integrações: Stripe, Mercado Pago",
+        ]}
+        outcome="Em construção: MVP focado em confiança e automação para reduzir tempo de contratação de cuidadores profissionais."
+      />
+    ),
   },
 ];

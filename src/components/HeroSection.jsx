@@ -85,17 +85,28 @@ const HeroSection = () => {
 
 
       <h2 className="bg-clip-text mt-[100px] text-transparent text-start mr-auto bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-2xl lg:text-3xl font-sans relative z-20 font-bold tracking-tight">
-        About Me
+        Sobre mim
       </h2>
       <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-start mt-[20px]">
-        Get the best advices from our experts, including expert artists,
-        painters, marathon enthusiasts and RDX, totally free.
+        Tenho três anos de experiência profissional em desenvolvimento de software e programo há quatro anos. Todos os dias busco aprender algo novo para ampliar minhas oportunidades e entregar projetos com mais qualidade.
       </p>
-
       <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-start mt-[20px]">
-        Get the best advices from our experts, including expert artists,
-        painters, marathon enthusiasts and RDX, totally free.
+        No meu último cargo atuei em uma empresa internacional sediada em Londres, participando da evolução de uma plataforma digital end-to-end. Colaborei com times globais, conectando back-end e front-end e aprimorando integrações críticas.
       </p>
+      <div className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-start mt-[24px] space-y-3">
+        <p className="font-semibold text-neutral-900 dark:text-white">Projetos recentes que entreguei:</p>
+        <ul className="space-y-2 pl-4 text-sm md:text-base list-disc marker:text-[#4e69e0]">
+          <li>
+            <span className="font-semibold text-neutral-900 dark:text-white">Controle Financeiro</span> - monorepo mobile (Expo) + core compartilhado, com motor de precificação, tokens reutilizáveis e base pronta para sync offline seguro.
+          </li>
+          <li>
+            <span className="font-semibold text-neutral-900 dark:text-white">Micro Enterprise</span> - template Next.js completo para pequenos negócios com ecommerce 2.0, dashboard, locator em mapa, blog, chat e SEO automatizado.
+          </li>
+          <li>
+            <span className="font-semibold text-neutral-900 dark:text-white">Admin SD</span> - painel administrativo para condomínios com módulos de visitantes, agendamentos, entregas, reuniões online e autenticação corporativa.
+          </li>
+        </ul>
+      </div>
 
       <Skills/>
     </div>

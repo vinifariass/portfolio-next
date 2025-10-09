@@ -1,6 +1,6 @@
 "use client";
 import { animate, motion } from "motion/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { IconBrandJavascript, IconBrandLaravel, IconBrandMysql, IconBrandNextjs, IconBrandPhp } from "@tabler/icons-react";
 
@@ -99,36 +99,61 @@ const Skeleton = () => {
     </div>
   );
 };
+
 const Sparkles = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const sparkles = useMemo(() => {
+    const seeded = (index, salt = 1) => {
+      const x = Math.sin((index + 1) * 9301 + salt * 49297) * 233280;
+      return x - Math.floor(x);
+    };
+
+    return Array.from({ length: 12 }, (_, i) => {
+      const baseTop = seeded(i, 1) * 100;
+      const baseLeft = seeded(i, 2) * 100;
+      const offsetTop = (seeded(i, 3) - 0.5) * 4;
+      const offsetLeft = (seeded(i, 4) - 0.5) * 4;
+      const targetTop = seeded(i, 5) * 100;
+      const targetLeft = seeded(i, 6) * 100;
+      const opacity = 0.4 + seeded(i, 7) * 0.6;
+      const duration = 4 + seeded(i, 8) * 2;
+      const delay = seeded(i, 9) * 2;
+
+      return {
+        initialStyle: {
+          position: "absolute",
+          top: `${baseTop}%`,
+          left: `${baseLeft}%`,
+          width: "2px",
+          height: "2px",
+          borderRadius: "50%",
+          zIndex: 1,
+        },
+        animateStyle: {
+          top: `calc(${targetTop}% + ${offsetTop}px)`,
+          left: `calc(${targetLeft}% + ${offsetLeft}px)`,
+          opacity,
+          scale: [1, 1.2, 0],
+        },
+        transition: {
+          duration,
+          delay,
+          repeat: Infinity,
+          ease: "linear",
+        },
+      };
+    });
+  }, []);
+
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkles.map((sparkle, index) => (
         <motion.span
-          key={`star-${i}`}
-          animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
-            scale: [1, 1.2, 0],
-          }}
-          transition={{
-            duration: random() * 2 + 4,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
-            width: `2px`,
-            height: `2px`,
-            borderRadius: "50%",
-            zIndex: 1,
-          }}
-          className="inline-block bg-black dark:bg-white"></motion.span>
+          key={`star-${index}`}
+          animate={sparkle.animateStyle}
+          transition={sparkle.transition}
+          style={sparkle.initialStyle}
+          className="inline-block bg-black dark:bg-white"
+        ></motion.span>
       ))}
     </div>
   );
