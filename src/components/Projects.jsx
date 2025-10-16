@@ -102,6 +102,35 @@ const ProjectContent = ({
 
 const data = [
   {
+    category: "Barbearia · Marketplace",
+    title: "Barber Simonato",
+    src: "https://s.wordpress.com/mshots/v1/https://barber-simonato.vercel.app/?w=1200",
+    content: (
+      <ProjectContent
+        title="Barber Simonato"
+        heroImage="https://s.wordpress.com/mshots/v1/https://barber-simonato.vercel.app/?w=1600"
+        link="https://barber-simonato.vercel.app/"
+        description="Landing page transacional para a barbearia Simonato, com jornada completa de agendamento, vitrine de serviços premium e diferenciais competitivos, construída em 8 horas do layout ao deploy."
+        details={[
+          "Estruturei a narrativa comercial com hero de alto impacto, prova social, explicação do plano de assinatura e seção de suporte para reduzir atrito e aumentar conversões.",
+          "Sincronizei o site público com o painel administrativo Next.js (CRUDs de barbearias e barbeiros) e materiais de onboarding para manter marketing, operação e agendamentos alinhados.",
+        ]}
+        highlights={[
+          "CTAs estratégicas (WhatsApp, suporte, admin) distribuídas por rolagem para capturar leads em diferentes estágios.",
+          "Vitrine de serviços com destaque para combos, avaliações verificadas e blocos informativos sobre assinatura e segurança.",
+          "Documentação completa (painel, Instagram, notificações) garantindo operação autônoma pós-lançamento.",
+        ]}
+        stack={[
+          "Next.js 14 (App Router)",
+          "TypeScript / Tailwind CSS",
+          "Shadcn UI components",
+          "Prisma / PostgreSQL / NextAuth",
+        ]}
+        outcome="Site institucional e funcional lançado em um único dia de sprint, já apto para captar leads e reforçar a confiança da barbearia no ambiente digital."
+      />
+    ),
+  },
+  {
     category: "Fintech · Mobile",
     title: "Controle Financeiro",
     src: "https://s.wordpress.com/mshots/v1/https://financontrol-beta.vercel.app/?w=1200",
